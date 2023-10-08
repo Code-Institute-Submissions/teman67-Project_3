@@ -88,7 +88,7 @@ def down_stairs():
     time.sleep(1)
     password = input("Enter the passcode to open the chest: ")
 
-    if password.lower() == "Teman67":
+    if password.lower() == "teman67":
         print("Congratulations! You entered the correct passcode.")
         time.sleep(1)
         print("The chest opens, and you find the golds inside.")
