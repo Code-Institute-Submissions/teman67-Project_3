@@ -41,10 +41,13 @@ def description_page():
     print("\nIn this adventure, you find yourself in a main hall with three doors: left, center, and right.")
     time.sleep(1)
     print("Your goal is to explore the rooms, find a passcode, and make choices to complete the adventure.")
-    chose=input("Type 'B' to go back to main page: ")
-    if chose=='B'.lower():
-        welcome_page()
-    else:
-        print("Invalid input")
+    print("Press 'B' to go back to main page.")
+    while True:
+        choice = input().lower()
+        if choice == 'b':
+            welcome_page()
+            break  # Exit the loop when returning to the welcome page
+        else:
+            print("Invalid choice. Press 'B' to go back to the main page.")
 
 welcome_page()
