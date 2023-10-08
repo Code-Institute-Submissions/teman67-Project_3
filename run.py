@@ -81,4 +81,113 @@ def left_door():
         print("Invalid choice. Try again.")
         left_door()
 
+def down_stairs():
+    print(
+        "You find yourself in a dimly lit basement. There is a chest of golds here, but it's locked."
+    )
+    time.sleep(1)
+    password = input("Enter the passcode to open the chest: ")
+
+    if password.lower() == "Teman67":
+        print("Congratulations! You entered the correct passcode.")
+        time.sleep(1)
+        print("The chest opens, and you find the golds inside.")
+        time.sleep(1)
+        display_golden_chest()
+        time.sleep(1)
+        print("You are now rich! Well done!")
+        choice = input("Do you want to play again? (y/n): ")
+        if choice == "y":
+            main_hall()
+        elif choice == "n":
+            print("Thanks for playing!")
+
+    else:
+        print("Incorrect password. Try to find the passcode!")
+        choice_2 = input(
+            "Where do you want to go, upstairs or main hall? (up/main): ").lower()
+        if choice_2 == "up":
+            left_door()
+        elif choice_2 == "main":
+            main_hall()
+        else:
+            print("Invalid choice. Try again.")
+            down_stairs()
+
+
+def center_door():
+    print(
+        "You enter a room with two staircases, one leading up and another door back to the main hall."
+    )
+    choice = input(
+        "Do you want to go up the stairs or back to the main hall? (up/main): "
+    ).lower()
+
+    if choice == "up":
+        up_stairs()
+    elif choice == "main":
+        main_hall()
+    else:
+        print("Invalid choice. Try again.")
+        center_door()
+
+
+def up_stairs():
+    print(
+        "You climb the stairs and find yourself in a room with a note on the wall."
+    )
+    time.sleep(1)
+    print("The note reads: 'The passcode is Teman67.'")
+    time.sleep(1)
+    print("You memorize the passcode and decide to go back to the main hall.")
+    main_hall()
+
+
+def right_door():
+    print("You enter a room filled with giant spiders!")
+    display_spider()
+    time.sleep(1)
+    print("You panic and try to escape, but the spiders overwhelm you.")
+    time.sleep(1)
+    print("Game Over! You have been captured by the spiders.")
+
+    while True:
+        play_again = input("Do you want to play again? (y/n): ").lower()
+
+        if play_again == "y":
+            main_hall()
+            break  # Exit the loop and start a new game
+        elif play_again == "n":
+            print("Thanks for playing!")
+            exit()  # Exit the game completely
+        else:
+            print("Invalid choice. Choose 'y' or 'n'!")
+
+
+def display_golden_chest():
+    print("  ________")
+    print(" /        \\")
+    print("|   $$$$   |")
+    print("|  $$$$$$  |")
+    print("| $$$$$$$$ |")
+    print("| $$$$$$$$ |")
+    print("|  $$$$$$  |")
+    print("|   $$$$   |")
+    print(" \\________/")
+    
+def display_spider():
+    print("""
+     _______  _______ _________ ______   _______  _______ 
+    (  ____ \(  ____ )\__   __/(  __  \ (  ____ \(  ____ )
+    | (    \/| (    )|   ) (   | (  \  )| (    \/| (    )|
+    | (_____ | (____)|   | |   | |   ) || (__    | (____)|
+    (_____  )|  _____)   | |   | |   | ||  __)   |     __)
+          ) || (         | |   | |   ) || (      | (\ (   
+    /\____) || )      ___) (___| (__/  )| (____/\| ) \ \__
+    \_______)|/       \_______/(______/ (_______/|/   \__/
+                                                          
+    """)
+  
+
+# Start the game 
 welcome_page()
