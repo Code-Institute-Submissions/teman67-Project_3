@@ -146,7 +146,7 @@ def up_stairs():
     print(note_message, end='', flush=True)  # Print without newline and flush the output
     time.sleep(7)     
     # Clear the message by printing spaces
-    print("\r" + " " * len(note_message), end='', flush=True)
+    print("\r" + " * " * len(note_message), end='', flush=True)
 
     print("\nYou memorize the passcode and decide to go back to the main hall.")
     main_hall()
