@@ -96,11 +96,16 @@ def down_stairs():
         display_golden_chest()
         time.sleep(1)
         print("You are now rich! Well done!")
-        choice = input("Do you want to play again? (y/n): ")
-        if choice == "y":
-            main_hall()
-        elif choice == "n":
-            print("Thanks for playing!")
+        while True:
+            choice = input("Do you want to play again? (y/n): ")
+            if choice == "y":
+                main_hall()
+            elif choice == "n":
+                print("Thanks for playing!")
+                exit()
+            else:
+                print("Invalid choice. Try again!")
+
 
     else:
         print("Incorrect password. Try to find the passcode!")
@@ -111,7 +116,7 @@ def down_stairs():
         elif choice_2 == "main":
             main_hall()
         else:
-            print("Invalid choice. Try again.")
+            print("Invalid choice. Try again!")
             down_stairs()
 
 
@@ -134,12 +139,16 @@ def center_door():
 
 def up_stairs():
     print(
-        "You climb the stairs and find yourself in a room with a note on the wall."
+        "You climb the stairs and find yourself in a room with a note on the wall. You have 7 seconds to memorize it!"
     )
     time.sleep(1)
-    print("The note reads: 'The passcode is Teman67.'")
-    time.sleep(1)
-    print("You memorize the passcode and decide to go back to the main hall.")
+    note_message = "The note reads: 'Teman67'"
+    print(note_message, end='', flush=True)  # Print without newline and flush the output
+    time.sleep(7)     
+    # Clear the message by printing spaces
+    print("\r" + " " * len(note_message), end='', flush=True)
+
+    print("\nYou memorize the passcode and decide to go back to the main hall.")
     main_hall()
 
 
