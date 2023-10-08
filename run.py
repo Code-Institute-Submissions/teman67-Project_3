@@ -24,7 +24,7 @@ def welcome_page():
 
         choice = input().lower()
         if choice == "p":
-            break
+            main_hall()
         elif choice == "d":
             description_page()
         elif choice == "q":
@@ -40,7 +40,7 @@ def description_page():
     print("=" * 50)
     print("\nIn this adventure, you find yourself in a main hall with three doors: left, center, and right.")
     time.sleep(1)
-    print("Your goal is to explore the rooms, find a passcode, and make choices to complete the adventure.")
+    print("Your goal is to explore the rooms, find a passcode, open gold chest, and make choices to complete the adventure.")
     print("Press 'B' to go back to main page.")
     while True:
         choice = input().lower()
@@ -49,5 +49,36 @@ def description_page():
             break  # Exit the loop when returning to the welcome page
         else:
             print("Invalid choice. Press 'B' to go back to the main page.")
+
+def main_hall():
+    print("You are in a main hall with three doors: left, center, and right.")
+    choice = input("Which door do you choose? (left/center/right): ").lower()
+
+    if choice == "left":
+        left_door()
+    elif choice == "center":
+        center_door()
+    elif choice == "right":
+        right_door()
+    else:
+        print("Invalid choice. Try again.")
+        main_hall()
+
+
+def left_door():
+    print(
+        "You enter a room with a staircase leading down and another door back to the main hall."
+    )
+    choice = input(
+        "Do you want to go down the stairs or back to the main hall? (down/main): "
+    ).lower()
+
+    if choice == "down":
+        down_stairs()
+    elif choice == "main":
+        main_hall()
+    else:
+        print("Invalid choice. Try again.")
+        left_door()
 
 welcome_page()
