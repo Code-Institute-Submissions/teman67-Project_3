@@ -179,24 +179,106 @@ def up_stairs():
 
 
 def right_door():
-    print("You enter a room filled with giant spiders!")
-    display_spider()
+  global has_candle, has_matches, has_knife, has_hammer, has_rope
+  items_chosen = 0  # Keep track of the number of items chosen
+  print(
+      "You enter a big room and see five items: a candle, matches, a knife, a hammer, and a rope."
+  )
+  time.sleep(1)
+  print(
+      "Which items do you want to take? You can select three items. Be careful about which items you want to grab!"
+  )
+  time.sleep(1)
+  while items_chosen < 3:
+    item_choice = input(
+        "Choose an item (candle/matches/knife/hammer/rope): ").lower()
+    if item_choice == "candle" and not has_candle:
+      has_candle = True
+      print("You picked up the candle.")
+      items_chosen += 1
+    elif item_choice == "matches" and not has_matches:
+      has_matches = True
+      print("You picked up the matches.")
+      items_chosen += 1
+    elif item_choice == "knife" and not has_knife:
+      has_knife = True
+      print("You picked up the knife.")
+      items_chosen += 1
+    elif item_choice == "hammer" and not has_hammer:
+      has_hammer = True
+      print("You picked up the hammer.")
+      items_chosen += 1
+    elif item_choice == "rope" and not has_rope:
+      has_rope = True
+      print("You picked up the rope.")
+      items_chosen += 1
+      time.sleep(1)
+      print("Oh Shit! it is a snake.")
+      display_snake()
+      time.sleep(1)
+      print("You try to escape but the snake bites you. Game Over!")
+      time.sleep(2)
+      print("I told you be careful about which items you want to grab!")
+      time.sleep(3)
+      while True:
+        play_again = input("Do you want to play again? (y/n): ").lower()
+        if play_again == "y":
+          has_candle = False
+          has_matches = False
+          has_knife = False
+          has_hammer = False
+          has_rope = False
+          main_hall()
+          break  # Exit the loop and start a new game
+        elif play_again == "n":
+          print("Thanks for playing!")
+          exit()  # Exit the game completely
+        else:
+          print("Invalid choice. Choose 'y' or 'n'!")
+    else:
+      print(
+          "Invalid choice. Either you already have this item or it's not one of the available options."
+      )
+
+  # After selecting three items, proceed with the encounter with the spider
+  print(
+      "You have picked up three items and are ready to proceed. Wait! There's a gigantic spider in the room! You have to fight with it!"
+  )
+  display_spider()
+  # Define the spider's stats
+  time.sleep(1)
+  if has_knife == True:
+    time.sleep(1)
+    print("You have a knife! You successfully defeat the spider. Good Job!")
+    time.sleep(1)
+    display_knife()
+    time.sleep(2)
+    print(
+        "You can now continue to find the gold chest! You go to the main hall")
+    main_hall()
+
+  else:
+    print("You do not have an item to fight the spider with!")
     time.sleep(1)
     print("You panic and try to escape, but the spiders overwhelm you.")
     time.sleep(1)
     print("Game Over! You have been captured by the spiders.")
-
+    time.sleep(1)
     while True:
-        play_again = input("Do you want to play again? (y/n): ").lower()
-
-        if play_again == "y":
-            main_hall()
-            break  # Exit the loop and start a new game
-        elif play_again == "n":
-            print("Thanks for playing!")
-            exit()  # Exit the game completely
-        else:
-            print("Invalid choice. Choose 'y' or 'n'!")
+      play_again = input("Do you want to play again? (y/n): ").lower()
+      if play_again == "y":
+        has_candle = False
+        has_matches = False
+        has_knife = False
+        has_hammer = False
+        has_rope = False
+        main_hall()
+        break  # Exit the loop and start a new game
+      elif play_again == "n":
+        print("Thanks for playing!")
+        exit()  # Exit the game completely
+      else:
+        print("Invalid choice. Choose 'y' or 'n'!")
 
 
 def display_golden_chest():
