@@ -164,18 +164,18 @@ def center_door():
 
 
 def up_stairs():
-    print(
-        "You climb the stairs and find yourself in a room with a note on the wall. You have 7 seconds to memorize it!"
-    )
-    time.sleep(1)
-    note_message = "The note reads: 'Teman67'"
-    print(note_message, end='', flush=True)  # Print without newline and flush the output
-    time.sleep(7)     
-    # Clear the message by printing spaces
-    print("\r" + " * " * len(note_message), end='', flush=True)
+  print(
+      "You climb the stairs and find yourself in a room with a note on the wall. You have 8 seconds to memorize it!"
+  )
+  time.sleep(1)
+  note_message = "The note reads: 'Teman67'"
+  print(note_message, end='', flush=True)  # Print without newline and flush the output
+  time.sleep(8)
+  # Clear the message by printing spaces
+  print("\r" + " * " * len(note_message), end='', flush=True)
 
-    print("\nYou memorize the passcode and decide to go back to the main hall.")
-    main_hall()
+  print("\nYou memorize the passcode and decide to go back to the main hall.")
+  main_hall()
 
 
 def right_door():
