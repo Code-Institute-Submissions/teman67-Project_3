@@ -103,14 +103,19 @@ def down_stairs():
     if password == "Teman67":
       print("Congratulations! You entered the correct passcode.")
       time.sleep(1)
-      print("The chest opens, and you find the golds inside.")
-      time.sleep(1)
       display_golden_chest()
+      time.sleep(2)
+      print("The chest opens, and you find the golds inside.")
       time.sleep(1)
       print("You are now rich! Well done!")
       while True:
         choice = input("Do you want to play again? (y/n): ")
         if choice == "y":
+          has_candle = False
+          has_matches = False
+          has_knife = False
+          has_hammer = False
+          has_rope = False
           main_hall()
         elif choice == "n":
           print("Thanks for playing!")
@@ -213,8 +218,9 @@ def right_door():
       print("You picked up the rope.")
       items_chosen += 1
       time.sleep(1)
-      print("Oh Shit! it is a snake.")
       display_snake()
+      time.sleep(2)
+      print("Oh Shit! it is a snake.")
       time.sleep(1)
       print("You try to escape but the snake bites you. Game Over!")
       time.sleep(2)
@@ -244,15 +250,16 @@ def right_door():
   print(
       "You have picked up three items and are ready to proceed. Wait! There's a gigantic spider in the room! You have to fight with it!"
   )
+  time.sleep(2)
   display_spider()
   # Define the spider's stats
-  time.sleep(1)
+  time.sleep(2)
   if has_knife == True:
-    time.sleep(1)
-    print("You have a knife! You successfully defeat the spider. Good Job!")
     time.sleep(1)
     display_knife()
     time.sleep(2)
+    print("You have a knife! You successfully defeat the spider. Good Job!")
+    time.sleep(1)
     print(
         "You can now continue to find the gold chest! You go to the main hall")
     main_hall()
