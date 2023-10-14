@@ -180,6 +180,11 @@ def up_stairs():
 
 def right_door():
   global has_candle, has_matches, has_knife, has_hammer, has_rope
+  has_candle = False
+  has_matches = False
+  has_knife = False
+  has_hammer = False
+  has_rope = False
   items_chosen = 0  # Keep track of the number of items chosen
   print(
       "You enter a big room and see five items: a candle, matches, a knife, a hammer, and a rope."
