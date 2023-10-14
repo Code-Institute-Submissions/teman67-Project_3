@@ -89,66 +89,61 @@ def left_door():
         left_door()
 
 def down_stairs():
-  if has_candle and has_matches:
-    print("You use the candle and matches to light up the room.")
-    time.sleep(1)
-    print("The room is now illuminated.")
-    time.sleep(1)
-    print(
-        "There is a chest of golds here, but it's locked. You need a passcode to open the chest."
-    )
-    time.sleep(1)
-    password = input("Enter the passcode to open the chest: ")
+    if has_candle and has_matches:
+        print("You use the candle and matches to light up the room.")
+        time.sleep(1)
+        print("The room is now illuminated.")
+        time.sleep(1)
+        print(
+            "There is a chest of golds here, but it's locked. You need a passcode to open the chest."
+        )
+        time.sleep(1)
+        password = input("Enter the passcode to open the chest: ")
 
-    if password == "Teman67":
-      print("Congratulations! You entered the correct passcode.")
-      time.sleep(1)
-      display_golden_chest()
-      time.sleep(2)
-      print("The chest opens, and you find the golds inside.")
-      time.sleep(1)
-      print("You are now rich! Well done!")
-      while True:
-        choice = input("Do you want to play again? (y/n): ")
-        if choice == "y":
-          has_candle = False
-          has_matches = False
-          has_knife = False
-          has_hammer = False
-          has_rope = False
-          main_hall()
-        elif choice == "n":
-          print("Thanks for playing!")
-          exit()
+        if password == "Teman67":
+            print("Congratulations! You entered the correct passcode.")
+            time.sleep(1)
+            print("The chest opens, and you find the golds inside.")
+            time.sleep(1)
+            display_golden_chest()
+            time.sleep(1)
+            print("You are now rich! Well done!")
+            while True:
+                choice = input("Do you want to play again? (y/n): ")
+                if choice == "y":
+                    main_hall()
+                elif choice == "n":
+                    print("Thanks for playing!")
+                    exit()
+                else:
+                    print("Invalid choice. Try again!")
+
         else:
-          print("Invalid choice. Try again!")
-
+            print("Incorrect password. Try to find the passcode!")
+            choice_2 = input(
+                "Where do you want to go, upstairs or main hall? (up/main): ").lower(
+                )
+            if choice_2 == "up":
+                left_door()
+            elif choice_2 == "main":
+                main_hall()
+            else:
+                print("Invalid choice. Try again!")
+                down_stairs()
     else:
-      print("Incorrect password. Try to find the passcode!")
-      choice_2 = input(
-          "Where do you want to go, upstairs or main hall? (up/main): ").lower(
-          )
-      if choice_2 == "up":
-        left_door()
-      elif choice_2 == "main":
-        main_hall()
-      else:
-        print("Invalid choice. Try again!")
-        down_stairs()
-  else:
-    print(
-        "It's too dark to see anything. Try to find some items to illuminate the room!"
-    )
-    time.sleep(1)
-    choice_2 = input(
-        "Where do you want to go, upstairs or main hall? (up/main): ").lower()
-    if choice_2 == "up":
-      left_door()
-    elif choice_2 == "main":
-      main_hall()
-    else:
-      print("Invalid choice. Try again!")
-      down_stairs()
+        print(
+            "It's too dark to see anything. Try to find some items to illuminate the room!"
+        )
+        time.sleep(1)
+        choice_2 = input(
+            "Where do you want to go, upstairs or main hall? (up/main): ").lower()
+        if choice_2 == "up":
+            left_door()
+        elif choice_2 == "main":
+            main_hall()
+        else:
+            print("Invalid choice. Try again!")
+            down_stairs()
 
 
 def center_door():
