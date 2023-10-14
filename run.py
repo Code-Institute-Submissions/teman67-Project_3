@@ -9,6 +9,9 @@ has_hammer = False
 has_rope = False
 
 def welcome_page():
+    """
+    The welcome function is loaded when the user start the game
+    """
     while True:
         print("\n" + "*" * 80)
         print("""
@@ -40,6 +43,9 @@ def welcome_page():
             print("Invalid choice. Press 'P' to start the game, 'D' for game description, or 'Q' to quit.")
 
 def description_page():
+    """
+    The description function shows the instruction of the game
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n" + "=" * 50)
     print("Welcome to the Text-Based Adventure Game!")
@@ -58,6 +64,9 @@ def description_page():
             print("Invalid choice. Press 'B' to go back to the main page.")
 
 def main_hall():
+    """
+    The main_hall function is the main entrance to different doors
+    """
     print("You are in a main hall with three doors: left, center, and right.")
     choice = input("Which door do you choose? (left/center/right): ").lower()
 
@@ -89,6 +98,9 @@ def left_door():
         left_door()
 
 def down_stairs():
+    """
+    The down_stairs function has the gold chest. User needs a candle and matches to light the room and see the gold chest
+    """
     if has_candle and has_matches:
         print("You use the candle and matches to light up the room.")
         time.sleep(1)
@@ -147,6 +159,9 @@ def down_stairs():
 
 
 def center_door():
+    """
+    The center function has the passcode of the gold chest. User has to memorize the code in 8 sec
+    """
     print(
         "You enter a room with two staircases, one leading up and another door back to the main hall."
     )
@@ -179,6 +194,9 @@ def up_stairs():
 
 
 def right_door():
+  """
+  The right_door function is a place where user can grab items. The user should be grab correct items to fight with spider and light the room
+  """
   global has_candle, has_matches, has_knife, has_hammer, has_rope
   has_candle = False
   has_matches = False
