@@ -1,9 +1,16 @@
 import time
 import os
 
+# Define global variables to keep track of items acquired
+has_candle = False
+has_matches = False
+has_knife = False
+has_hammer = False
+has_rope = False
+
 def welcome_page():
     while True:
-        print("\n" + "*" * 50)
+        print("\n" + "*" * 80)
         print("""
         __        __   _                            _          _   _          
         \ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___   | |_| |__   ___ 
@@ -19,7 +26,7 @@ def welcome_page():
         | |_| | (_| | | | | | |  __/_|                                        
          \____|\__,_|_| |_| |_|\___(_)                                        
         """)
-        print("*" * 50)
+        print("*" * 80)
         print("\nPress 'P' to start the game, 'D' for game description, or 'Q' to quit.")
 
         choice = input().lower()
@@ -40,7 +47,7 @@ def description_page():
     print("=" * 50)
     print("\nIn this adventure, you find yourself in a main hall with three doors: left, center, and right.")
     time.sleep(1)
-    print("Your goal is to explore the rooms, find a passcode, open gold chest, and make choices to complete the adventure.")
+    print("Your goal is to explore the rooms, find a passcode, make right choices, and finally open gold chest to complete the adventure.")
     print("Press 'B' to go back to main page.")
     while True:
         choice = input().lower()
