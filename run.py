@@ -204,14 +204,15 @@ def right_door():
   has_hammer = False
   has_rope = False
   items_chosen = 0  # Keep track of the number of items chosen
+  time.sleep(1)
   print(
       "You enter a big room and see five items: \na candle, matches, a knife, a hammer, and a rope."
   )
-  time.sleep(1)
+  time.sleep(3)
   print(
       "Which items do you want to take? You can select three items. \nBe careful about which items you want to grab!"
   )
-  time.sleep(1)
+  time.sleep(2)
   while items_chosen < 3:
     item_choice = input(
         "Choose an item (candle/matches/knife/hammer/rope): ").lower()
