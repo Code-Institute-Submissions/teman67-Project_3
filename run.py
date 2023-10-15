@@ -51,9 +51,9 @@ def description_page():
     print("Welcome to the Text-Based Adventure Game!")
     time.sleep(1)
     print("=" * 50)
-    print("\nIn this adventure, you find yourself in a main hall with three doors: left, center, and right.")
+    print("\nIn this adventure, you find yourself in a main hall with three doors: \nleft, center, and right.")
     time.sleep(1)
-    print("Your goal is to explore the rooms, find a passcode, make right choices, and finally open gold chest to complete the adventure.")
+    print("Your goal is to explore the rooms, find a passcode, make right choices, \nand finally open gold chest to complete the adventure.")
     print("Press 'B' to go back to main page.")
     while True:
         choice = input().lower()
@@ -83,7 +83,7 @@ def main_hall():
 
 def left_door():
     print(
-        "You enter a room with a staircase leading down and another door back to the main hall."
+        "You enter a room with a staircase leading down and another \ndoor back to the main hall."
     )
     choice = input(
         "Do you want to go down the stairs or back to the main hall? (down/main): "
@@ -107,7 +107,7 @@ def down_stairs():
         print("The room is now illuminated.")
         time.sleep(1)
         print(
-            "There is a chest of golds here, but it's locked. You need a passcode to open the chest."
+            "There is a chest of golds here, but it's locked. \nYou need a passcode to open the chest."
         )
         time.sleep(1)
         password = input("Enter the passcode to open the chest: ")
@@ -180,12 +180,12 @@ def center_door():
 
 def up_stairs():
   print(
-      "You climb the stairs and find yourself in a room with a note on the wall. You have 8 seconds to memorize it!"
+      "You climb the stairs and find yourself in a room with a note on the wall. \nYou have 10 seconds to memorize it!"
   )
   time.sleep(1)
   note_message = "The note reads: 'Teman67'"
   print(note_message, end='', flush=True)  # Print without newline and flush the output
-  time.sleep(8)
+  time.sleep(10)
   # Clear the message by printing spaces
   print("\r" + " * " * len(note_message), end='', flush=True)
 
@@ -209,7 +209,7 @@ def right_door():
   )
   time.sleep(1)
   print(
-      "Which items do you want to take? You can select three items. Be careful about which items you want to grab!"
+      "Which items do you want to take? You can select three items. \nBe careful about which items you want to grab!"
   )
   time.sleep(1)
   while items_chosen < 3:
@@ -266,7 +266,7 @@ def right_door():
 
   # After selecting three items, proceed with the encounter with the spider
   print(
-      "You have picked up three items and are ready to proceed. Wait! There's a gigantic spider in the room! You have to fight with it!"
+      "You have picked up three items and are ready to proceed. \nWait! There's a gigantic spider in the room! You have to fight with it!"
   )
   time.sleep(2)
   display_spider()
