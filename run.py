@@ -205,7 +205,7 @@ def right_door():
   has_rope = False
   items_chosen = 0  # Keep track of the number of items chosen
   print(
-      "You enter a big room and see five items: a candle, matches, a knife, a hammer, and a rope."
+      "You enter a big room and see five items: \na candle, matches, a knife, a hammer, and a rope."
   )
   time.sleep(1)
   print(
