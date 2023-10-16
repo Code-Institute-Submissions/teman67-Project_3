@@ -46,8 +46,30 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
   - In center door, the passcode will show and you have 10 sec to memorize it. After 10 sec the passcode will be replaced by * * * .
   - You can go back to the main hall by typing mian.
 
-  ![Center Door; Show passcode](readme/4.png)
-  ![Center Door; Hidde passcode](readme/5.png)
+![Center Door; Show passcode](readme/4.png)
+![Center Door; Hidde passcode](readme/5.png)
+
+
+- __The Right Door__
+  - Here you can see a list of five items. You can grab three of them by typing the name of the item one by one.
+  - It is important which items you pick up.
+  - If you pick up an item more than once or type other text you see an error message "Invalid choice. Either you already have this item or it's not one of the available options."
+
+![Right Door](readme/6.png)
+
+  - If you pick up the rope, you will bite by a snake and Game Over!
+  - You can play again by typing y. Typing n means end the game.
+
+![Snake](readme/7.png)
+
+  - After grabing three items, you face with a spider. You need a knife to fight with it. If you picked up a knife you can kill the spider, otherwise the spider will eat you and Game Over!
+
+![Spider; has knife](readme/8.png)  
+![Spider; no knife](readme/9.png)  
+  
+
+
+
 
 ## Testing
 
