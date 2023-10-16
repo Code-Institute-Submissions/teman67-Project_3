@@ -40,13 +40,19 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
   - You need some item to light the room. If you have them the room will be lighted, otherwise you need to find the items.
   - You can go up stairs or to the main hall by typing up or main.
 
-![Left Door](readme/3.png)
+![Left Door, dark room](readme/3.png)
+
+  - If you have candle and matches you can light the room and see the chest gold.
+  - Then you need a passcode to open the chest. If you enter the correct passcode then the chest will be opened and you win the game.
+
+![Left Door; win game](readme/10.png)  
 
 - __The Center Door__
   - In center door, the passcode will show and you have 10 sec to memorize it. After 10 sec the passcode will be replaced by * * * .
   - You can go back to the main hall by typing mian.
 
 ![Center Door; Show passcode](readme/4.png)
+
 ![Center Door; Hidde passcode](readme/5.png)
 
 
@@ -62,9 +68,10 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 
 ![Snake](readme/7.png)
 
-  - After grabing three items, you face with a spider. You need a knife to fight with it. If you picked up a knife you can kill the spider, otherwise the spider will eat you and Game Over!
+  - After grabing three items, you face with a spider. You need a knife to fight with it. If you picked up a knife you can kill the spider, otherwise the spider will overwhelm you and Game Over!
 
-![Spider; has knife](readme/8.png)  
+![Spider; has knife](readme/8.png)
+
 ![Spider; no knife](readme/9.png)  
   
 
