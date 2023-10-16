@@ -75,55 +75,52 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 ![Spider; no knife](readme/9.png)  
   
 
-
-
-
 ## Testing
 
-- I have checked the website on different screen sizes and it works well.
-- The webpage works well when I used Google chrome, Firefox, Opera, and Microsoft Edge web browsers.
-- The outcome of the quiz is always correct and I tested different scenarios to confirm it.
-- I confirm that the quiz questions are easy to read and the contrast is good enough.
-
-### Validator Testing
-
-- HTML
-  - No errors were returned when passing through the official W3C Markup Validator [W3C_validator](https://validator.w3.org/).
-- CSS
-  - No errors were found when passing through the official W3C CSS Validator [Jigsaw validator](https://jigsaw.w3.org/) .
-- Javascript
-  - No errors were found when passing through the official Jshint Validator [JSHint](https://jshint.com/).
-
-- The Google Chrome lighthouse tool was used to check the website:
-  - ![Scores for Quiz page](readme/scores.png)
+- Users should type valid text to continue the game. Otherwise, they see the error messages.
+- The game was tested on Anaconda and Heroku Terminal.
+- No error when the code was passed through the PEP8 <https://pep8ci.herokuapp.com>
 
 ### Fixed Bugs
 
-- When a user refreshed the page the scores in the table did not clean. Using localStorage.removeItem("quizScores") solved the isuue.
-- The songs did not start from 0 second when a user restarted the quiz. Using happyMusic.currentTime = 0; sadMusic.currentTime = 0 in resetQuiz() function solved the isuue.
+- 
 
 ## Deployment
 
-- GitHub pages
-  - The site was deployed to GitHub pages. The steps to deploy are as follows:
-    - In the GitHub repository, navigate to the Settings tab
-    - From the source section drop-down menu, select the Master Branch
-    - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- I followed the steps written below to deploy my project to Heroku, based on the Code Institute instructions:
 
-The live link can be found here - <https://teman67.github.io/Project_2/index.html>
+    - First created a Heroku account by flollowing the instructions given from Code Institute.
 
-- Local Clone
-  - Log in to GitHub and locate GitHub Repository Project_2 [Project 2](https://github.com/teman67/Project_2)
-  - Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-  - Open Git Bash
-  - Change the current working directory to the location where you want the cloned directory to be made.
-  - Type git clone and then paste The URL copied in the step 2.
-  - Press Enter and your local clone will be created.
+    - used the pip3 freeze > requirements.txt command to install our dependencies to Heroku.
+
+    - Commit changes push the changes to Github: git commit -m "Add requirements for deployment”
+
+    - In HEROKU after creating the account:
+
+    - "Create new App".
+
+    - Give the App a unique name and enter region.
+
+    - Click on "Create App".
+
+    - Click on "Settings" on your new App Dashboard.
+
+    - Scroll down to Config Vars to add creds.json files and KEY: PORT and VALUE: 8000 for the deployment.
+
+    - Press Add-button.
+
+    - Scroll down to Buildpacks and press the icon for Python, click Save Changes, then press the icon for Nodejs and save changes. These Buildpacks need to be in the same order as below:
+
+    - Python
+    - NodeJS
+    - Go to Deploy section tab and scroll down to the Deployment Method.I connect to Github pages and then could search for my Github Repository "guessword-game" and then click connect.
+
+    - Scroll down to Automatic and Manual Deploys sections. I clicked on Manual Deployment.
+
+    - Then in the Manual Deploy section, press Deploy Branch.
+
+    - After the project has been deployed successfully I clicked the View-button to see the program run in the terminal.
 
 ### Content
 
-- The image of the quiz page was tooken from google images.
-- The chicken icons were downloaded from google with .gif extention and then converted to .mp4 to reduce the size.
-- The songs were downloaded from [Pixabay](https://pixabay.com).
-- The Fisher-Yates algorithm to shuffle the questions was obtained from [Fisher-Yates Shuffle Algorithm](https://saturncloud.io/blog/how-to-randomize-shuffle-a-javascript-array/)
-- The Readme.md template was obtained from Code Institute [Code Institute](https://github.com/Code-Institute-Org/ci-full-template).
+- 
