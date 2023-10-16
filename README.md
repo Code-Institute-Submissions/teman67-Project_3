@@ -1,34 +1,53 @@
-# Nanotechnology Quiz
+# Text-based Adventure Game 
 
-This is a quiz game that you can test your knowledge in the field of Nanotechnology. In the first page you can find the instruction about how many questions are in the quiz and how many questions you need to answer correctly to win the quiz. By tracking your scores over time, you can challenge yourself to improve your performance and continue learning.
+Welcome to the Text-Based Adventure Game, an exciting and challenging adventure that will test your decision-making skills. In this game, you find yourself in a mysterious main hall with three doors leading to different adventures.
 
-![Responsice Mockup](readme/responsive.png)
+![Adventure Game](readme/1.png)
 
-The live link can be found here - <https://teman67.github.io/Project_2/index.html>
+The live link can be found here - <https://adventure-game-python-59a69fd7bf52.herokuapp.com>
+
+- __Your Mission__:
+
+    - Explore various rooms, each with its unique challenges.
+    - Find items to advance through the game.
+    - Discover the passcode to unlock a chest filled with treasure.
+    - Make the right choices to survive and complete your quest.
+
+- __Key Features__:
+
+    - A thrilling narrative that immerses you in the game's world.
+    - Engaging challenges that require critical thinking.
+    - Multiple rooms and adventures to keep you entertained.
 
 ### Existing Features
 
-- __The welcome page__
+- __The Main page__
 
-  - On the welcome page, you'll find an instruction about the game. It is clear for users that they need to answer at least 6 question correctly to win the game.
-  - Users can see what will happen after ending the game, including playing a song, showing a chicken icon and a table that record their attempts.
-  - Users can go to the quiz page by clicking the "Go to Quiz Page" button.
+  - On the main page, you'll find a welcome message and you can start playing by typing p, or read about the game by typing d. You can quit the game by type q.
+  - The case (uppercase or lowercase) of the letters is insignificant.
 
-![Welcome Page](readme/welcome_page.png)
+![Main Page](readme/1.png)
 
-- __The Quiz Page__
+- __The Description Page__
   
-  - At the top of the Quiz page there is a button that user can go back to the welcome page.
-  - Here, the questions are displayed and a user can select the correct answer from 5 available options.
-  - If the user select the correct answer then the Correct score increases otherwise the Incorrect score increases.
-  - When the user answers to 10 questions, if they answer to at least 6 questions correctly, then a happy song plays,a happy chicken dances and the background color changes to green. While, if the user cannot win the quiz a sad song plays, a sad chicken shows at the bottom of the page and the background color changes to red.
-  - The song is muted and the user can unmute the song.
-  - A table is also displayed after each participation and the user can track his/her scores.
-  - Each time that the user Restart the quiz, the questions are suffled.
+  - User can find information about the game here.
+  - By typing b user can go back to the main page.
   
-![Quiz Page](readme/quiz_page.png)
-![Win Quiz](readme/win_quiz.png)
-![Lose Quiz](readme/lose_quiz.png)
+![Description Page](readme/2.png)
+
+- __The Left Door__
+  - When you type left, you go to the left door. Then you can go back to the main hall or go down stairs.
+  - You need some item to light the room. If you have them the room will be lighted, otherwise you need to find the items.
+  - You can go up stairs or to the main hall by typing up or main.
+
+![Left Door](readme/3.png)
+
+- __The Center Door__
+  - In center door, the passcode will show and you have 10 sec to memorize it. After 10 sec the passcode will be replaced by * * * .
+  - You can go back to the main hall by typing mian.
+
+  ![Center Door; Show passcode](readme/4.png)
+  ![Center Door; Hidde passcode](readme/5.png)
 
 ## Testing
 
