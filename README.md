@@ -84,13 +84,12 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 
 ## Fixed Bugs
 
-- When a user was captured by snake or spider and select y to play again, the picked up items from right door did not remove from the selection list. Adding:
+- When a user was captured by snake or spider and select y to play again, the picked up items from right door did not remove from the selection list. Adding the following list to the right_door function solved the bug:
   - has_candle = False
   - has_matches = False
   - has_knife = False
   - has_hammer = False
   - has_rope = False 
-to the right_door function solved the bug.  
 
 
 ## Deployment
