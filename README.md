@@ -81,7 +81,7 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 - The game was tested on Anaconda and Heroku Terminal.
 - No error when the code was passed through the PEP8 <https://pep8ci.herokuapp.com>.
 - I have checked different scenarios of the game and confirm that all of them work correctly as follow:
-
+![Testing](readme/Testing.png) 
 
 ## Fixed Bugs
 
