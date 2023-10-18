@@ -80,7 +80,8 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 - Users should type valid text to continue the game. Otherwise, they see the error messages.
 - The game was tested on Anaconda and Heroku Terminal.
 - No error when the code was passed through the PEP8 <https://pep8ci.herokuapp.com>.
-- I have checked different scenarios of the game and confirm that all of them work correctly.
+- I have checked different scenarios of the game and confirm that all of them work correctly as follow:
+
 
 ## Fixed Bugs
 
@@ -90,6 +91,11 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
   - has_knife = False
   - has_hammer = False
   - has_rope = False 
+
+- To enhance the game's user-friendliness, I've incorporated the lower() function into all input fields, allowing users to input text in either uppercase or lowercase.
+
+- To continue asking from a user to type the correct text, I used while loop.
+- I encountered some errors in the "right door" function, which I resolved by adjusting the indentation within the while loop or if-else statements.
 
 
 ## Deployment
@@ -125,6 +131,15 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
     - Scroll down to Manual Deploys sections, then press Deploy Branch.
 
     - After the project has been deployed successfully I clicked the View-button to see the program run in the terminal.
+
+- Local Clone
+
+  - Log in to GitHub and locate GitHub Repository Project_3 [Project 3](https://github.com/teman67/Project_3)
+  - Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+  - Open Git Bash
+  - Change the current working directory to the location where you want the cloned directory to be made.
+  - Type git clone and then paste The URL copied in the step 2.
+  - Press Enter and your local clone will be created.
 
 ### Content
 
