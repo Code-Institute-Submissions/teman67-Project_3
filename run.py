@@ -303,7 +303,7 @@ def right_door():
     main_hall()
 
   else:
-    print("You do not have an item to fight the spider with!")
+    print("Your hammer isn't of much use in a battle against the spider!")
     time.sleep(1)
     print("You panic and try to escape, but the spiders overwhelm you.")
     time.sleep(1)
