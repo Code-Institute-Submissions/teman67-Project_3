@@ -12,6 +12,13 @@ def welcome_page():
     """
     The welcome function is loaded when the user start the game
     """
+    global has_candle, has_matches, has_knife, has_hammer, has_rope
+    has_candle = False
+    has_matches = False
+    has_knife = False
+    has_hammer = False
+    has_rope = False
+    
     while True:
         print("\n" + "*" * 80)
         print("""
