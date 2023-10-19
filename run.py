@@ -47,13 +47,16 @@ def description_page():
     The description function shows the instruction of the game
     """
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n" + "=" * 50)
+    print("\n" + "=" * 80)
     print("Welcome to the Text-Based Adventure Game!")
+    print("=" * 80)
     time.sleep(1)
-    print("=" * 50)
     print("\nIn this adventure, you find yourself in a main hall with three doors: \nleft, center, and right.")
     time.sleep(1)
     print("Your goal is to explore the rooms, find a passcode, make right choices, \nand finally open gold chest to complete the adventure.")
+    time.sleep(1)
+    print("You can try to enter the correct passcode twice!")
+    time.sleep(1)
     print("Press 'B' to go back to main page.")
     while True:
         choice = input().lower()
@@ -450,5 +453,5 @@ def display_snake():
 
   """)
 
-# Start the game 
+# Start the game
 welcome_page()
