@@ -31,7 +31,8 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
 - __The Description Page__
   
   - User can find information about the game here.
-  - By typing b user can go back to the main page.
+  - It is written that user can only enter the passcode to open the gold chest twice.
+  - By typing b/B user can go back to the main page.
   
 ![Description Page](readme/2.png)
 
@@ -93,7 +94,6 @@ The live link can be found here - <https://adventure-game-python-59a69fd7bf52.he
   - has_rope = False 
 
 - To enhance the game's user-friendliness, I've incorporated the lower() function into all input fields, allowing users to input text in either uppercase or lowercase.
-
 - To continue asking from a user to type the correct text, I used while loop.
 - I encountered some errors in the "right door" function, which I resolved by adjusting the indentation within the while loop or if-else statements.
 
