@@ -129,7 +129,7 @@ def down_stairs():
                     while True:
                         choice = input("Do you want to play again? (y/n): ")
                         if choice == "y":
-                            main_hall()
+                            welcome_page()
                         elif choice == "n":
                             print("Thanks for playing!")
                             exit()
@@ -171,7 +171,7 @@ def down_stairs():
                                     time.sleep(1)
                                     choice = input("Do you want to play again? (y/n): ")
                                     if choice == "y":
-                                        main_hall()
+                                        welcome_page()
                                     elif choice == "n":
                                         time.sleep(1)
                                         print("Thanks for playing!")
@@ -186,7 +186,7 @@ def down_stairs():
                                     time.sleep(1)
                                     choice = input("Do you want to play again? (y/n): ")
                                     if choice == "y":
-                                        main_hall()
+                                        welcome_page()
                                     elif choice == "n":
                                         time.sleep(1)
                                         print("Thanks for playing!")
