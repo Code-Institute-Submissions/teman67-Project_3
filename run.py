@@ -18,7 +18,7 @@ def welcome_page():
     has_knife = False
     has_hammer = False
     has_rope = False
-    
+
     while True:
         print("\n" + "*" * 80)
         print("""
@@ -188,7 +188,7 @@ def down_stairs():
                                         print("Invalid choice. Try again!")
                             else:
                                 time.sleep(1)
-                                print("You enter the incorrect passcode twice. No more chance to enter the passcode. Game Over!")
+                                print("You enter the incorrect passcode twice. No more chance to enter the passcode. \nGame Over!")
                                 while True:
                                     time.sleep(1)
                                     choice = input("Do you want to play again? (y/n): ")
