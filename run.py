@@ -134,17 +134,65 @@ def down_stairs():
                             print("Invalid choice. Try again!")
 
                 else:
+                    time.sleep(1)
                     print("Incorrect password. Try to find the passcode!")
-                    choice_2 = input(
-                        "Where do you want to go, upstairs or main hall? (up/main): ").lower(
-                        )
-                    if choice_2 == "up":
-                        left_door()
-                    elif choice_2 == "main":
-                        main_hall()
-                    else:
-                        print("Invalid choice. Try again!")
-                        down_stairs()
+                    time.sleep(1)
+                    while True:
+                        choice_1 = input("do you want to enter the passcode again? (y/n): ").lower()
+                        if choice_1 == 'n':
+                            choice_2 = input(
+                                "Where do you want to go, upstairs or main hall? (up/main): ").lower(
+                                )
+                            if choice_2 == "up":
+                                time.sleep(1)
+                                left_door()
+                            elif choice_2 == "main":
+                                time.sleep(1)
+                                main_hall()
+                            else:
+                                print("Invalid choice. Try again!")
+                                time.sleep(1)
+                                down_stairs()
+                        elif choice_1 == 'y':
+                            time.sleep(1)
+                            password = input("Enter the passcode to open the chest: ")
+                            if password == "Teman67":
+                                print("Congratulations! You entered the correct passcode.")
+                                time.sleep(1)
+                                print("The chest opens, and you find the golds inside.")
+                                time.sleep(1)
+                                display_golden_chest()
+                                time.sleep(1)
+                                print("You are now rich! Well done!")
+                                while True:
+                                    time.sleep(1)
+                                    choice = input("Do you want to play again? (y/n): ")
+                                    if choice == "y":
+                                        main_hall()
+                                    elif choice == "n":
+                                        time.sleep(1)
+                                        print("Thanks for playing!")
+                                        exit()
+                                    else:
+                                        time.sleep(1)
+                                        print("Invalid choice. Try again!")
+                            else:
+                                time.sleep(1)
+                                print("You enter the incorrect passcode twice. No more chance to enter the passcode. Game Over!")
+                                while True:
+                                    time.sleep(1)
+                                    choice = input("Do you want to play again? (y/n): ")
+                                    if choice == "y":
+                                        main_hall()
+                                    elif choice == "n":
+                                        time.sleep(1)
+                                        print("Thanks for playing!")
+                                        exit()
+                                    else:
+                                        print("Invalid choice. Try again!")
+                        else:
+                            time.sleep(1)
+                            print("Invalid choice. Try again!")
             elif ask_password == 'n':
                 time.sleep(1)
                 while True:
